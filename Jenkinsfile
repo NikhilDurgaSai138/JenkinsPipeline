@@ -23,11 +23,15 @@ pipeline {
             }
             stage('four') {
                 parallel {
-                    stage('unit test') {
-                        echo 'running unit test'
+                    stage('Unit Test') {
+                        steps {
+                            echo 'running unit test'
 
+
+                        }
+                        
                     }
-                    stage('integration test') {
+                    stage('Integration test') {
                         agent {
                             docker {
                                 reuseNode false
